@@ -1,0 +1,245 @@
+body, html {
+    background-color: #DCDCDC;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    }
+
+.navbar {
+    width: 100%;
+    background-color: black;
+    color: orange;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    font-size: 28px;
+    margin-left: 2%;
+}
+
+.cart-text {
+    color: orange;
+    margin-right: auto;
+    font-size: 20px;
+}
+
+.cart-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 72%;
+    padding-right: 30px;  
+}
+
+.hamburger-menu {
+    margin-left: 2%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    order: -1;
+    transition: transform 0.3s ease;
+}
+
+.hamburger-menu:hover {
+    transform: scale(1.1);
+}
+
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    top: 55px;
+    left: 4.5%;
+    background-color: black;
+    width: 10%;
+    border-radius: 5px; /* Adicionado bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+}
+
+.menu-item {
+    color: orange;
+    padding: 10px;
+    border-top: 2px solid orange;
+    transition: background-color 0.3s ease; /* Transição suave no hover */
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 165, 0, 0.2); /* Efeito de hover */
+}
+
+.menu-item:first-child {
+    border-top: none;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: orange;
+}
+
+.hamburger-menu:hover .bar {
+    transform: scale(1.1); /* Efeito de expansão no hover */
+}
+
+.sobre-a-loja {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    margin-right: 10%;
+}
+
+.coluna-imagem, .coluna-texto {
+    flex: 1;
+    padding: 20px;
+}
+
+.coluna-imagem img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin-left: 50%;
+    margin-right: 0;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.coluna-texto {
+    padding: 0 20px;
+    margin-bottom: 1%;
+}
+
+.coluna-texto h2 {
+    color: black;
+    margin-bottom: 0;
+}
+
+.separador-sobre, .separador-produtos {
+    border-bottom: 3px solid orange;
+    height: 3px; /* Adicione esta linha */
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.separador-sobre {
+    border-bottom: 3px solid orange;
+    margin-top: 5px; /* Adicione esta linha */
+}
+
+.separador-produtos {
+    border-bottom: 3px solid orange;
+    width: 86%;
+    margin-left: 0%;
+    margin-top: 5px; /* Adicione esta linha */
+}
+
+.coluna-texto p {
+    text-align: justify;
+    margin-top: 0;
+    color: #333; /* Cor escura para melhor contraste */
+    line-height: 1.2; /* Espaçamento entre linhas aumentado */
+}
+
+.produtos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    margin-top: 5px;
+    margin-left: 22.5%;
+}
+
+.lista-produtos {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    flex-wrap: nowrap; /* Impede que os itens se quebrem em linhas múltiplas */
+    gap: 120px; /* Aumenta o espaço entre os produtos com uma medida fixa */
+    margin-left: 4%;
+    margin-top: 15px;
+    }
+
+.produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    transition: transform 0.3s ease;
+    opacity: 0; /* Inicia invisível */
+    margin-top: 50px; /* Inicia um pouco abaixo da posição final */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Adicione transform aqui */
+}
+
+.produto img {
+    width: 145%;
+    height: auto;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease; /* Adicione transform aqui */
+    margin-bottom: 30px;
+}
+
+.produto button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: orange;
+    color: black;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.produto button:hover {
+    background-color: #ff7f50; /* Cor mais clara ao passar o mouse */
+}
+
+/* Estilo para 'Sobre a Loja' */
+.sobre-a-loja h2 {
+    color: black; /* Cor laranja avermelhada */
+    font-family: 'Arial', sans-serif; /* Tipo de fonte */
+    text-shadow: 1px 1px 2px #000; /* Sombra preta para destacar o texto */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+.produtos h2 {
+    color: black; /* Cor laranja avermelhada */
+    font-family: 'Arial', sans-serif; /* Tipo de fonte */
+    text-shadow: 1px 1px 2px #000; /* Sombra preta para destacar o texto */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+.produtos h3 {
+    color: black; /* Cor laranja avermelhada */
+    font-family: 'Arial', sans-serif; /* Tipo de fonte */
+    text-shadow: 1px 1px 4px #000; /* Sombra preta para destacar o texto */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+.typing-effect {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(40, end);
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+footer {
+    background-color: black;
+    color: orange;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
