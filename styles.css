@@ -91,7 +91,7 @@ body, html {
     display: flex;
     margin-top: 20px;
     align-items: center;
-    margin-right: 10%;
+    margin-right: 17%;
 }
 
 .coluna-imagem, .coluna-texto {
@@ -133,7 +133,7 @@ body, html {
 
 .separador-produtos {
     border-bottom: 3px solid orange;
-    width: 86%;
+    width: 78%;
     margin-left: 0%;
     margin-top: 5px; /* Adicione esta linha */
 }
@@ -150,15 +150,15 @@ body, html {
     flex-direction: column;
     align-items: flex-start; /* Alinha os itens à esquerda */
     margin-top: 5px;
-    margin-left: 22.5%;
+    margin-left: 20.5%;
 }
 
 .lista-produtos {
     display: flex;
     justify-content: center; /* Centraliza os itens horizontalmente */
     flex-wrap: nowrap; /* Impede que os itens se quebrem em linhas múltiplas */
-    gap: 120px; /* Aumenta o espaço entre os produtos com uma medida fixa */
-    margin-left: 4%;
+    gap: 100px; /* Aumenta o espaço entre os produtos com uma medida fixa */
+    margin-left: 3%;
     margin-top: 15px;
     }
 
@@ -174,7 +174,7 @@ body, html {
 }
 
 .produto img {
-    width: 145%;
+    width: 130%;
     height: auto;
     border-radius: 10px; /* Bordas arredondadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
@@ -243,8 +243,10 @@ footer {
 /* Estilos Responsivos para dispositivos com largura até 640px */
 @media (max-width: 640px) {
     body, html {
-        overflow-y: auto; /* Permite barra de rolagem vertical se necessário */
+        overflow-y: auto; /* Permite barra de rolagem vertical se necessário */  
+        overflow-x: auto;
     }
+
     .navbar {
         flex-direction: column;
         padding: 20px;
@@ -288,13 +290,17 @@ footer {
         align-items: center;
     }
 
+    .sobre-a-loja h2 {
+        margin-left: 9%;
+    }
+
     .produtos h2 {
-        margin-left: 35%;
+        margin-left: 36%;
     }
 
     .coluna-imagem img {
         width: 90%; /* Define a largura da imagem */
-        margin-left: 10%; /* Alinha a margem esquerda ao centro */
+        margin-left: 16%; /* Alinha a margem esquerda ao centro */
         margin-right: auto; /* Alinha a margem direita ao centro */
         display: block; /* Garante que a imagem seja tratada como um bloco, permitindo que as margens automáticas funcionem */
     }
@@ -304,7 +310,9 @@ footer {
     }
 
     .coluna-texto p {
+    width: 100%;
     text-align: justify;
+    margin-left: 30px;
     margin-top: 45px;
     color: #333; /* Cor escura para melhor contraste */
     line-height: 1.2; /* Espaçamento entre linhas aumentado */
@@ -319,8 +327,15 @@ footer {
 
     .separador-produtos {
         border-bottom: 3px solid orange;
-        width: 110%;
-        margin-right: 40%;
+        width: 100%;
+        margin-right: 29%;
+        margin-top: 0px; /* Adicionado para manter o estilo consistente em dispositivos móveis */
+    }
+
+    .separador-sobre {
+        border-bottom: 3px solid orange;
+        width: 100%;
+        margin-left: 8%;
         margin-top: 0px; /* Adicionado para manter o estilo consistente em dispositivos móveis */
     }
 
