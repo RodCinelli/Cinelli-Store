@@ -255,31 +255,33 @@
     }
 
     .logo {
-        font-size: 24px; /* Ajusta o tamanho da fonte do logo */
-        margin-left: 5%; /* Ajusta a margem esquerda */
+        font-size: 23px; /* Ajusta o tamanho da fonte do logo */
+        margin-left: 0%; /* Ajusta a margem esquerda */
     }
 
     .cart-text {
-        font-size: 18px; /* Reduz o tamanho da fonte */
+        font-size: 23px; /* Reduz o tamanho da fonte */
+        margin-left: 0%; /* Remove a margem direita */
     }
 
     .cart-icon {
         width: 28px; /* Ajusta o tamanho do ícone do carrinho */
         height: 28px;
-        margin-left: auto; /* Alinha o ícone à direita */
+        margin-left: 19%; /* Alinha o ícone à direita */
         padding-right: 15px; /* Reduz o padding à direita */
     }
 
     /* Menu Hamburger */
     .hamburger-menu {
         order: 2; /* Ajusta a ordem se necessário */
-        margin-left: auto; /* Ajusta a margem à esquerda para auto */
+        margin-right: 6%; /* Ajusta a margem à esquerda para auto */
     }
 
     /* Dropdown Menu */
     .dropdown-menu {
         width: 15%; /* Ajusta a largura do menu dropdown */
         top: 60px; /* Ajusta a posição vertical */
+        left: 2.5%; /* Antes estava 4.5%, reduzindo trará para a esquerda */
     }
 
     /* Seção Sobre a Loja */
@@ -335,6 +337,10 @@
             font-size: 18px; /* Exemplo de ajuste */
         }
 
+        h2.typing-effect {
+            font-size: 24px; /* Ajusta o tamanho da fonte para melhor legibilidade */
+        }
+
         /* Ajustes para separadores */
         .separador-sobre {
             /* Reduz a largura dos separadores para se ajustar ao novo layout */
@@ -387,14 +393,14 @@
     .logo {
         margin-right: 10%;
         text-align: center;
-        font-size: 16px; /* Aumenta o tamanho da fonte para melhor legibilidade */
+        font-size: 18px; /* Aumenta o tamanho da fonte para melhor legibilidade */
         margin-top: -20px; /* Move a logo mais para cima */
     }
     
     .cart-text {
         margin-right: 10%;
         text-align: center;
-        font-size: 16px; /* Aumenta o tamanho da fonte para melhor legibilidade */
+        font-size: 18px; /* Aumenta o tamanho da fonte para melhor legibilidade */
     }
     
     .cart-icon {
@@ -428,6 +434,10 @@
 
     .produtos h2 {
         margin-left: 36%;
+    }
+
+    h2.typing-effect {
+        font-size: 23px; /* Ajusta o tamanho da fonte para melhor legibilidade */
     }
 
     .coluna-imagem img {
