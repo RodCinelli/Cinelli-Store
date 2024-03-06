@@ -1,243 +1,375 @@
-body, html {
-    background-color: #DCDCDC;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
+/* Responsividade para Layout Desktop (a partir de 1024px) */
+    body, html {
+        background-color: #DCDCDC;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        }
+
+    .navbar {
+        width: 100%;
+        background-color: black;
+        color: orange;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 10px;
     }
 
-.navbar {
-    width: 100%;
-    background-color: black;
-    color: orange;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 10px;
-}
-
-.logo {
-    font-size: 28px;
-    margin-left: 2%;
-}
-
-.cart-text {
-    color: orange;
-    margin-right: auto;
-    font-size: 20px;
-}
-
-.cart-icon {
-    width: 24px;
-    height: 24px;
-    margin-left: 72%;
-    padding-right: 30px;  
-}
-
-.hamburger-menu {
-    margin-left: 2%;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    order: -1;
-    transition: transform 0.3s ease;
-}
-
-.hamburger-menu:hover {
-    transform: scale(1.1);
-}
-
-.dropdown-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    text-align: center;
-    font-size: 20px;
-    top: 55px;
-    left: 4.5%;
-    background-color: black;
-    width: 10%;
-    border-radius: 5px; /* Adicionado bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
-}
-
-.menu-item {
-    color: orange;
-    padding: 10px;
-    border-top: 2px solid orange;
-    transition: background-color 0.3s ease; /* Transição suave no hover */
-}
-
-.menu-item:hover {
-    background-color: rgba(255, 165, 0, 0.2); /* Efeito de hover */
-}
-
-.menu-item:first-child {
-    border-top: none;
-}
-
-.bar {
-    width: 30px;
-    height: 3px;
-    background-color: orange;
-}
-
-.hamburger-menu:hover .bar {
-    transform: scale(1.1); /* Efeito de expansão no hover */
-}
-
-.sobre-a-loja {
-    display: flex;
-    margin-top: 20px;
-    align-items: center;
-    margin-right: 17%;
-}
-
-.coluna-imagem, .coluna-texto {
-    flex: 1;
-    padding: 20px;
-}
-
-.coluna-imagem img {
-    width: 50%;
-    height: auto;
-    display: block;
-    margin-left: 50%;
-    margin-right: 0;
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-.coluna-texto {
-    padding: 0 20px;
-    margin-bottom: 1%;
-}
-
-.coluna-texto h2 {
-    color: black;
-    margin-bottom: 0;
-}
-
-.separador-sobre, .separador-produtos {
-    border-bottom: 3px solid orange;
-    height: 3px; /* Adicione esta linha */
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-.separador-sobre {
-    border-bottom: 3px solid orange;
-    margin-top: 5px; /* Adicione esta linha */
-}
-
-.separador-produtos {
-    border-bottom: 3px solid orange;
-    width: 78%;
-    margin-left: 0%;
-    margin-top: 5px; /* Adicione esta linha */
-}
-
-.coluna-texto p {
-    text-align: justify;
-    margin-top: 0;
-    color: #333; /* Cor escura para melhor contraste */
-    line-height: 1.2; /* Espaçamento entre linhas aumentado */
-}
-
-.produtos {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Alinha os itens à esquerda */
-    margin-top: 5px;
-    margin-left: 20.5%;
-}
-
-.lista-produtos {
-    display: flex;
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    flex-wrap: nowrap; /* Impede que os itens se quebrem em linhas múltiplas */
-    gap: 100px; /* Aumenta o espaço entre os produtos com uma medida fixa */
-    margin-left: 3%;
-    margin-top: 15px;
+    .logo {
+        font-size: 28px;
+        margin-left: 2%;
     }
 
-.produto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 200px;
-    transition: transform 0.3s ease;
-    opacity: 0; /* Inicia invisível */
-    margin-top: 50px; /* Inicia um pouco abaixo da posição final */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Adicione transform aqui */
-}
+    .cart-text {
+        color: orange;
+        margin-right: auto;
+        font-size: 20px;
+    }
 
-.produto img {
-    width: 130%;
-    height: auto;
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s ease; /* Adicione transform aqui */
-    margin-bottom: 30px;
-}
+    .cart-icon {
+        width: 24px;
+        height: 24px;
+        margin-left: 72%;
+        padding-right: 30px;  
+    }
 
-.produto button {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: orange;
-    color: black;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 5px; /* Bordas arredondadas */
-}
+    .hamburger-menu {
+        margin-left: 2%;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        order: -1;
+        transition: transform 0.3s ease;
+    }
 
-.produto button:hover {
-    background-color: #ff7f50; /* Cor mais clara ao passar o mouse */
-}
+    .hamburger-menu:hover {
+        transform: scale(1.1);
+    }
 
-/* Estilo para 'Sobre a Loja' */
-.sobre-a-loja h2 {
-    color: black; /* Cor laranja avermelhada */
-    font-family: 'Arial', sans-serif; /* Tipo de fonte */
-    text-shadow: 1px 1px 2px #000; /* Sombra preta para destacar o texto */
-    margin-bottom: 10px; /* Espaçamento abaixo do título */
-}
+    .dropdown-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
+        font-size: 20px;
+        top: 55px;
+        left: 4.5%;
+        background-color: black;
+        width: 10%;
+        border-radius: 5px; /* Adicionado bordas arredondadas */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    }
 
-.produtos h2 {
-    color: black; /* Cor laranja avermelhada */
-    font-family: 'Arial', sans-serif; /* Tipo de fonte */
-    text-shadow: 1px 1px 2px #000; /* Sombra preta para destacar o texto */
-    margin-bottom: 10px; /* Espaçamento abaixo do título */
-}
+    .menu-item {
+        color: orange;
+        padding: 10px;
+        border-top: 2px solid orange;
+        transition: background-color 0.3s ease; /* Transição suave no hover */
+    }
 
-.produtos h3 {
-    color: black; /* Cor laranja avermelhada */
-    font-family: 'Arial', sans-serif; /* Tipo de fonte */
-    text-shadow: 1px 1px 1px #000; /* Sombra preta para destacar o texto */
-    margin-bottom: 10px; /* Espaçamento abaixo do título */
-}
+    .menu-item:hover {
+        background-color: rgba(255, 165, 0, 0.2); /* Efeito de hover */
+    }
 
-.typing-effect {
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 3s steps(40, end);
-}
+    .menu-item:first-child {
+        border-top: none;
+    }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
+    .bar {
+        width: 30px;
+        height: 3px;
+        background-color: orange;
+    }
 
-footer {
-    background-color: black;
-    color: orange;
-    text-align: center;
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    .hamburger-menu:hover .bar {
+        transform: scale(1.1); /* Efeito de expansão no hover */
+    }
+
+    .sobre-a-loja {
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        margin-right: 17%;
+    }
+
+    .coluna-imagem, .coluna-texto {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .coluna-imagem img {
+        width: 50%;
+        height: auto;
+        display: block;
+        margin-left: 50%;
+        margin-right: 0;
+        border-radius: 10px; /* Bordas arredondadas */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    }
+
+    .coluna-texto {
+        padding: 0 20px;
+        margin-bottom: 1%;
+    }
+
+    .coluna-texto h2 {
+        color: black;
+        margin-bottom: 0;
+    }
+
+    .separador-sobre, .separador-produtos {
+        border-bottom: 3px solid orange;
+        height: 3px; /* Adicione esta linha */
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .separador-sobre {
+        border-bottom: 3px solid orange;
+        margin-top: 5px; /* Adicione esta linha */
+    }
+
+    .separador-produtos {
+        border-bottom: 3px solid orange;
+        width: 78%;
+        margin-left: 0%;
+        margin-top: 5px; /* Adicione esta linha */
+    }
+
+    .coluna-texto p {
+        text-align: justify;
+        margin-top: 0;
+        color: #333; /* Cor escura para melhor contraste */
+        line-height: 1.2; /* Espaçamento entre linhas aumentado */
+    }
+
+    .produtos {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Alinha os itens à esquerda */
+        margin-top: 5px;
+        margin-left: 20.5%;
+    }
+
+    .lista-produtos {
+        display: flex;
+        justify-content: center; /* Centraliza os itens horizontalmente */
+        flex-wrap: nowrap; /* Impede que os itens se quebrem em linhas múltiplas */
+        gap: 100px; /* Aumenta o espaço entre os produtos com uma medida fixa */
+        margin-left: 3%;
+        margin-top: 15px;
+        }
+
+    .produto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+        transition: transform 0.3s ease;
+        opacity: 0; /* Inicia invisível */
+        margin-top: 50px; /* Inicia um pouco abaixo da posição final */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Adicione transform aqui */
+    }
+
+    .produto img {
+        width: 130%;
+        height: auto;
+        border-radius: 10px; /* Bordas arredondadas */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        transition: transform 0.3s ease; /* Adicione transform aqui */
+        margin-bottom: 30px;
+    }
+
+    .produto button {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: orange;
+        color: black;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border-radius: 5px; /* Bordas arredondadas */
+    }
+
+    .produto button:hover {
+        background-color: #ff7f50; /* Cor mais clara ao passar o mouse */
+    }
+
+    /* Estilo para 'Sobre a Loja' */
+    .sobre-a-loja h2 {
+        color: black; /* Cor laranja avermelhada */
+        font-family: 'Arial', sans-serif; /* Tipo de fonte */
+        text-shadow: 1px 1px 2px #000; /* Sombra preta para destacar o texto */
+        margin-bottom: 10px; /* Espaçamento abaixo do título */
+    }
+
+    .produtos h2 {
+        color: black; /* Cor laranja avermelhada */
+        font-family: 'Arial', sans-serif; /* Tipo de fonte */
+        text-shadow: 1px 1px 2px #000; /* Sombra preta para destacar o texto */
+        margin-bottom: 10px; /* Espaçamento abaixo do título */
+    }
+
+    .produtos h3 {
+        color: black; /* Cor laranja avermelhada */
+        font-family: 'Arial', sans-serif; /* Tipo de fonte */
+        text-shadow: 1px 1px 1px #000; /* Sombra preta para destacar o texto */
+        margin-bottom: 10px; /* Espaçamento abaixo do título */
+    }
+
+    .typing-effect {
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 3s steps(40, end);
+    }
+
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+
+    footer {
+        background-color: black;
+        color: orange;
+        text-align: center;
+        padding: 10px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+/* Estilos Responsivos para dispositivos com largura de 641px até 1023px */
+@media (min-width: 641px) and (max-width: 1023px) {
+    /* Ajustes gerais para tablets */
+    body, html {
+        overflow-y: auto; /* Habilita a rolagem vertical conforme necessário */
+    }
+
+    /* Navbar */
+    .navbar {
+        justify-content: space-between; /* Ajusta o espaçamento dos itens da navbar */
+        padding: 15px 20px; /* Aumenta o padding para mais espaço */
+    }
+
+    .logo {
+        font-size: 24px; /* Ajusta o tamanho da fonte do logo */
+        margin-left: 5%; /* Ajusta a margem esquerda */
+    }
+
+    .cart-text {
+        font-size: 18px; /* Reduz o tamanho da fonte */
+    }
+
+    .cart-icon {
+        width: 28px; /* Ajusta o tamanho do ícone do carrinho */
+        height: 28px;
+        margin-left: auto; /* Alinha o ícone à direita */
+        padding-right: 15px; /* Reduz o padding à direita */
+    }
+
+    /* Menu Hamburger */
+    .hamburger-menu {
+        order: 2; /* Ajusta a ordem se necessário */
+        margin-left: auto; /* Ajusta a margem à esquerda para auto */
+    }
+
+    /* Dropdown Menu */
+    .dropdown-menu {
+        width: 15%; /* Ajusta a largura do menu dropdown */
+        top: 60px; /* Ajusta a posição vertical */
+    }
+
+    /* Seção Sobre a Loja */
+    .sobre-a-loja {
+        flex-direction: column; /* Muda para coluna para melhor visualização */
+        align-items: center; /* Centraliza os itens */
+        margin-top: 20px;
+        margin-right: 0; /* Remove a margem direita */
+    }
+
+    .coluna-imagem img {
+        width: 80%; /* Ajusta a largura da imagem */
+        margin: 0 auto; /* Centraliza a imagem */
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .coluna-texto {
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .coluna-texto p {
+        width: 90%; /* Ajusta a largura do texto para melhor legibilidade */
+        text-align: justify;
+        margin-left: 35px;
+        margin-top: 45px;
+        color: #333; /* Cor escura para melhor contraste */
+        line-height: 1.2; /* Espaçamento entre linhas aumentado */
+    }
+
+    /* Seção Produtos */
+    .produtos {
+        margin-left: 0; /* Remove a margem esquerda */
+        align-items: center; /* Centraliza os produtos */
+    }
+
+    .lista-produtos {
+        flex-wrap: wrap; /* Permite que os produtos se ajustem em várias linhas */
+        justify-content: space-around; /* Espalha os produtos uniformemente */
+        gap: 20px; /* Adiciona um espaço entre os produtos */
+    }
+
+    .produto {
+        opacity: 1; /* Garante que os produtos sejam visíveis */
+        transition: none; /* Remove a transição para evitar efeitos inesperados */
+        width: 40%;
+        margin-right: 3%;
+    }
+    
+        /* Ajustes para o texto dentro das seções */
+        .coluna-texto h2, .coluna-texto p, .produtos h2, .produtos h3 {
+            /* Ajusta o tamanho da fonte para melhor legibilidade */
+            font-size: 18px; /* Exemplo de ajuste */
+        }
+
+        /* Ajustes para separadores */
+        .separador-sobre {
+            /* Reduz a largura dos separadores para se ajustar ao novo layout */
+            width: 90%; /* Exemplo de ajuste */
+            margin: 20px auto; /* Centraliza os separadores */
+        }
+
+        .separador-produtos {
+            /* Reduz a largura dos separadores para se ajustar ao novo layout */
+            width: 85%; /* Exemplo de ajuste */
+            margin: 20px auto; /* Centraliza os separadores */
+        }
+    
+        /* Ajustes para imagens dos produtos */
+        .produto img {
+            /* Ajusta o tamanho das imagens para melhor visualização */
+            width: 100%; /* Torna as imagens responsivas */
+            margin-bottom: 15px; /* Ajusta o espaço abaixo das imagens */
+        }
+    
+        /* Ajustes para botões */
+        .produto button {
+            /* Aumenta o tamanho dos botões para facilitar a interação */
+            padding: 12px 20px; /* Exemplo de ajuste */
+            font-size: 16px; /* Exemplo de ajuste */
+            margin-bottom: 20px;
+        }
+    
+        /* Ajustes para o rodapé */
+        footer {
+            /* Ajusta o posicionamento e o espaçamento do rodapé */
+            position: relative; /* Altera a posição para relativa */
+            margin-top: 20px; /* Adiciona espaço acima do rodapé */
+            padding: 15px 0; /* Ajusta o padding vertical do rodapé */
+        }
 }
 
 /* Estilos Responsivos para dispositivos com largura até 640px */
